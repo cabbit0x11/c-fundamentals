@@ -3,22 +3,12 @@
 int main(void)
 {
     int n;
+    int sum = 0;
     scanf("%d", &n);
-
-    if (n % 15 == 0)
+    for (int i = 0; i <= n; i++)
     {
-        printf("FizzBuzz");
+        sum = sum + i;
     }
-    else if (n % 3 == 0)
-    {
-        printf("Fizz");
-    }
-    else if (n % 5 == 0)
-    {
-        printf("Buzz");
-    } else {
-        printf("%d", n);
-    }
-
+    printf("%d", sum);
     return 0;
 }
