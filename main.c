@@ -1,18 +1,25 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void) {
-    char buf[100];
-    fgets(buf, sizeof buf, stdin);
-    
-    for (int i = 0; buf[i] != '\0'; i++) {
-        if (buf[i] == '\n') {
-            buf[i] = '\0';
-            break;
-        }
+int main(void)
+{
+    int n;
+    scanf("%d", &n);
+
+    if (n % 15 == 0)
+    {
+        printf("FizzBuzz");
     }
-    
-    printf("%d\n", (int)strlen(buf));
-    
+    else if (n % 3 == 0)
+    {
+        printf("Fizz");
+    }
+    else if (n % 5 == 0)
+    {
+        printf("Buzz");
+    } else {
+        printf("%d", n);
+    }
+
     return 0;
 }
